@@ -1,0 +1,11 @@
+<div class="head-title">
+    <h3 class="title">{{ post?.title }}</h3>
+    <p class="details">by {{ post?.firstName }} {{ post?.lastName }}; on {{ this.formatDate(post?.dateCreated) }} </p>
+</div>
+<div class="blog-post">
+    <div class="header">
+        <div class="post-info">
+            <div class="name"><p>{{ post?.body }}</p></div>
+        </div>
+    </div>
+</div>

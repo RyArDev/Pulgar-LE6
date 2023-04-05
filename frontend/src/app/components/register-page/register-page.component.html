@@ -1,0 +1,24 @@
+<div class="register-container">
+    <div class="register-card">
+      <h2 class="register-title">Register</h2>
+      <form class="register-form form" (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" class="form-control" [(ngModel)]="form.username" #username="ngModel" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="form-control" [(ngModel)]="form.password" #password="ngModel" required>
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" class="form-control" [(ngModel)]="form.firstName" #firstName="ngModel" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" class="form-control" [(ngModel)]="form.lastName" #lastName="ngModel" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>

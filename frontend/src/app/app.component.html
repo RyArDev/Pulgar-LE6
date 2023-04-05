@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <ul class="nav-links">
+      <li class="nav-link">
+        <a routerLink="/" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-link" *ngIf="!userKey && !tokenKey">
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-link" *ngIf="!userKey && !tokenKey">
+        <a routerLink="/register" routerLinkActive="active">Register</a>
+      </li>
+      <li class="nav-link" *ngIf="userKey && tokenKey">
+        <a routerLink="/" (click)="this.logout()" routerLinkActive="active">Logout</a>
+      </li>
+      <li class="nav-link" *ngIf="userKey && tokenKey">
+        <a routerLink="/add-post" routerLinkActive="active">Add Post</a>
+      </li>
+    </ul>
+    <div *ngIf="userKey && tokenKey">
+        User ID: {{this.userKey}}
+    </div>
+  </nav>
+<router-outlet></router-outlet>

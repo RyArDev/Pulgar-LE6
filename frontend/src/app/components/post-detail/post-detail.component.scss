@@ -1,0 +1,26 @@
+.head-title{
+    text-align: center;
+    padding: 15px;
+    .title{
+        font-size: 32px;
+    }
+    .details{
+        font-size: 16px;
+    }
+}
+
+.blog-post {
+    background-color: #3b435c;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    width: 50%;
+    margin: auto auto 15px auto;
+
+    .post-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 10px;
+    }
+}

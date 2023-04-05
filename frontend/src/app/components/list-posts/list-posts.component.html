@@ -1,0 +1,20 @@
+<div class="head-title">
+    <h1>All Blog Posts</h1>
+</div>
+<div class="blog-post" *ngFor="let post of posts | slice: (currentPage - 1) * pageSize : (currentPage - 1) * pageSize + pageSize">
+    <div class="header data">
+      <div class="id"><a href="/posts/{{ post.id }}">{{ post.id }}</a></div>
+      <div class="user-info">
+            <h1 class="title id"><a href="/posts/{{ post.id }}">{{ post.title }}</a></h1>
+            <div class="name">by {{ post.firstName }} {{ post.lastName }}</div>
+            <span class="handle">@{{ post.userName }}</span>
+            <div class="date">{{ post.dateCreated | date }}</div>
+      </div>
+    </div>
+</div>
+
+<div class="pagination">
+    <a (click)="previousPage()">Previous</a>
+    <a *ngFor="let page of pages" [class.active]="currentPage === page" (click)="setCurrentPage(page)">{{ page }}</a>
+    <a (click)="nextPage()">Next</a>
+</div>
